@@ -88,17 +88,17 @@ public class Main {
 
     public static void task7() {
         System.out.println("Задача 7");
-        int data = 1;
-        int friday = 5;
+      //  int data = 1;
+        int friday = 3;
         do {
             System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
-            data++;
+        //   data++;
             friday = friday + 7;
         } while (friday <= 31);
     }
 
     public static void task8() {
-        System.out.println("Задача 8");
+        System.out.println("Задача 8. Первый вариант");
         int i = 0;
         int step = 79;
         int yearNumber = 2023;
@@ -112,6 +112,25 @@ public class Main {
                 }
             }
         }
+        System.out.println("Задача 8. Второй вариант");
+        int year = 0;
+        int currentYear = 2020;
+        while (year < (currentYear +100)) {
+            year = year + step;
+            if ((year > (currentYear - 200)) && (year < currentYear)) {
+                System.out.println("Второй вариант. За последние 200 лет комета появлялась в " + year + " году.");
+            } else if ((year < (currentYear + 100)) && (year > currentYear)) {
+                System.out.println("Второй вариантю. В следующие 100 лет появление кометы ожидается в  " + year + " году.");
+            }
+        }
+
+        //Ну в целом логика правильная, но код можно сильно укоротить. Сделать такое условие цикла пока год меньше
+        // текущий год + 100
+       // Внутри цикла прибавлять к переменной step 79 на каждой итерации. Также внутри цикла написать условный
+        // оператор, если step больше, чем текущий год - 200, то выводить год в консоль.
+       // Правда в таком случае в выводе ну будет написано в прошлом была комета или в будущем,
+        // но это тоже можно будет добавить)
+
     }
 }
 
